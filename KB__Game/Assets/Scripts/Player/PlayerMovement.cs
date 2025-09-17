@@ -1,87 +1,29 @@
-using System;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
+
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Vector2 moveDirection;
-    private bool isDashing;
-    private bool isWalking;
-    private float lookDirection = 1f;
+    private InputAction moveAction;
+    private Vector2 moveValue;
 
-    public Rigidbody2D rb;
-    public SpriteRenderer sr;
-    public InputActionReference move;
-    // public Animator animator;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private float moveSpeed = 100;
 
-    [Header("Walk")]
-    public float moveSpeed = 70f;
-
-
-
-    private void Awake()
+    void Awake()
     {
-        Application.targetFrameRate = -1;
+        rb = this.GetComponent<Rigidbody2D>();
+        moveAction = InputSystem.actions.FindAction("Move");
     }
 
+    // Update is called once per frame
     void Update()
     {
-        if (isDashing) return;
-
-        moveDirection = move.action.ReadValue<Vector2>();
-        WalkingCheck();
-        FlipSprite();
+        moveValue = moveAction.ReadValue<Vector2>();
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        if (isDashing) return;
-        rb.AddForce(new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed), ForceMode2D.Force);
-    }
-
-    // Flip sprite depending on move direction (left or right)
-    private void FlipSprite()
-    {
-        if (moveDirection.x < 0f)
-        {
-            sr.flipX = true;
-            lookDirection = -1f;
-
-        }
-        else if (moveDirection.x > 0f)
-        {
-            sr.flipX = false;
-            lookDirection = 1f;
-        }
-    }
-    private void WalkingCheck()
-    {
-        if (moveDirection.x != 0f || moveDirection.y != 0f)
-        {
-            isWalking = true;
-            // animator.SetBool("isWalking", isWalking);
-        }
-        else
-        {
-            isWalking = false;
-            // animator.SetBool("isWalking", isWalking);
-        }
-    }
-
-    public void DisableHurtAnimation()
-    {
-        // animator.SetBool("isHurt", false);
-        gameObject.layer = LayerMask.NameToLayer("Player");
-    }
-    public void setMoveSpeed(float speed)
-    {
-        moveSpeed = speed;
-    }
-
-    public float getMoveSpeed()
-    {
-        return moveSpeed;
+        rb.AddForce(new Vector2(moveValue.x * moveSpeed, moveValue.y * moveSpeed), ForceMode2D.Force);
     }
 }
