@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private InputAction moveAction;
     private Vector2 moveValue;
+    [SerializeField] private Camera cam;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float moveSpeed = 100;
@@ -25,5 +26,6 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         rb.AddForce(new Vector2(moveValue.x * moveSpeed, moveValue.y * moveSpeed), ForceMode2D.Force);
+        cam.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, cam.transform.position.z);
     }
 }
