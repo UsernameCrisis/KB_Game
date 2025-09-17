@@ -10,6 +10,10 @@ public class WallGenerator
         foreach (var position in (HashSet<Vector2Int>)basicWallPositions)
         {
             tilemapVisualizer.PaintSingleBasicWall(position);
+
+            // Optionally add wall hitboxes here if you want to handle it during wall creation
+            // Example (pseudo-code, depends on your implementation):
+            // WallHitboxManager.AddHitboxAtPosition(position);
         }
     }
 
