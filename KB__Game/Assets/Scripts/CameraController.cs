@@ -18,7 +18,6 @@ public class CameraController : MonoBehaviour
     {
         if (startZoom)
         {
-            Debug.Log("Zooming");
             zoom -= zoomMultiplier;
             camera.orthographicSize = Mathf.SmoothDamp(zoom, zoom * zoomMultiplier, ref velocity, smoothTime);
             if (zoom <= 2.5f)
