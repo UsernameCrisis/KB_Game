@@ -2477,6 +2477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   cam: {fileID: 0}
   rb: {fileID: 1336296195}
+  animator: {fileID: 0}
   moveSpeed: 50
 --- !u!212 &1336296197
 SpriteRenderer:
@@ -3302,6 +3303,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -1, y: 2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 12
+      m_TileSpriteIndex: 12
+      m_TileMatrixIndex: 1
+      m_TileColorIndex: 14
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 0
@@ -3328,7 +3339,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: fdd952d755333fd4bba5491b5baa1bf5, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: a55d48d31d38265408198f4eac066c17, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: a89deca583de0e94d896b628f8651cfb, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: b7d43b3cbec034446bfdf1da72a375d7, type: 2}
@@ -3363,7 +3374,7 @@ Tilemap:
     m_Data: {fileID: 794775411, guid: ffa2dd44505763c4f8a12ef6fa10685f, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1464067290, guid: ffa2dd44505763c4f8a12ef6fa10685f, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: -1358998004, guid: ffa2dd44505763c4f8a12ef6fa10685f, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: -493223407, guid: ffa2dd44505763c4f8a12ef6fa10685f, type: 3}
@@ -3392,7 +3403,7 @@ Tilemap:
       e31: 0
       e32: 0
       e33: 1
-  - m_RefCount: 17
+  - m_RefCount: 18
     m_Data:
       e00: 1
       e01: 0
@@ -3439,7 +3450,7 @@ Tilemap:
     m_Data: {r: 1e-45, g: 1e-45, b: 1e-45, a: 1e-45}
   - m_RefCount: 0
     m_Data: {r: 1e-45, g: 1e-45, b: 1e-45, a: 1e-45}
-  - m_RefCount: 20
+  - m_RefCount: 21
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1

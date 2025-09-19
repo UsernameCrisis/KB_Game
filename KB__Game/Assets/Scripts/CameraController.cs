@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
     private float velocity = 0f;
     private float smoothTime = 0.25f;
     private bool startZoom = false;
-    [SerializeField] private new Camera camera;
+    [SerializeField] private Camera camera;
     void Start()
     {
         zoom = camera.orthographicSize;
