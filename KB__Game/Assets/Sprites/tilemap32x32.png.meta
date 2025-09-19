@@ -1369,6 +1369,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: tilemap32x32_55
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 32
+        height: 16
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f5facff1074c9d40bcc41c350441df8
+      internalID: -493223407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap32x32_56
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 32
+        height: 16
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b071532a2d255c4a9cea09f821cde37
+      internalID: -630882195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1438,6 +1482,8 @@ TextureImporter:
       tilemap32x32_52: -774550749
       tilemap32x32_53: -1002914855
       tilemap32x32_54: 794775411
+      tilemap32x32_55: -493223407
+      tilemap32x32_56: -630882195
       tilemap32x32_6: -4270015430659748500
       tilemap32x32_7: -4761404031595917688
       tilemap32x32_8: -8167086764108792602
